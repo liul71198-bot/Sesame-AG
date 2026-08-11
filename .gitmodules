@@ -1,6 +1,1 @@
-[submodule "libxposed/api"]
-	path = libxposed/api
-	url = https://github.com/LSPosed/libxposed-api.git
-[submodule "libxposed/example"]
-	path = libxposed/example
-	url = https://github.com/LSPosed/libxposed-api.git
+
