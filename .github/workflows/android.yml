@@ -5,7 +5,6 @@ on:
   push:
     tags:
       - "[0-9]*-*"
-  workflow_dispatch:
 
 env:
   CI: "true"
@@ -243,12 +242,10 @@ jobs:
           echo "Current time: $(date)"
 
       - name: Checkout
-  uses: actions/checkout@v4
-  with:
-    fetch-depth: 0
-    ref: ${{ github.ref }}
-    submodules: true  # Add this line
-    token: ${{ secrets.GITHUB_TOKEN }}  # Add if submodule is private
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
 
       - name: Set up JDK
         uses: actions/setup-java@v5
