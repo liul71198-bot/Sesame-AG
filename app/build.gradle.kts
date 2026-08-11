@@ -15,7 +15,9 @@ var isCIBuild: Boolean = System.getenv("CI").toBoolean()
 
 android {
     namespace = "fansirsqi.xposed.sesame"
-    compileSdk = 36
+    compileSdk = 37              # 改为 37
+...
+buildToolsVersion = "37.0.0" # 需要添加这一行
     packaging {
         jniLibs {
             useLegacyPackaging = true
