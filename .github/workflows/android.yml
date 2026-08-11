@@ -243,10 +243,12 @@ jobs:
           echo "Current time: $(date)"
 
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: ${{ github.ref }}
+  uses: actions/checkout@v4
+  with:
+    fetch-depth: 0
+    ref: ${{ github.ref }}
+    submodules: true  # Add this line
+    token: ${{ secrets.GITHUB_TOKEN }}  # Add if submodule is private
 
       - name: Set up JDK
         uses: actions/setup-java@v5
